@@ -87,10 +87,6 @@ OBJ = $(ALLOCA) cmpt$o connect$o fnmatch$o ftp$o ftp-basic$o  \
 wget$(exeext): $(OBJ)
 	$(LINK) $(OBJ) $(LIBS) $(LIBM) $(LDLIBS)
 
-# work around an internal bug in the m68k-elf crosscompiler
-ftp-basic.o: ftp-basic.c
-	$(COMPILE) -O0 -c $<
-
 ansi2knr: ansi2knr.o
 	$(CC) -o ansi2knr ansi2knr.o $(LIBS) $(LIBM) $(LDLIBS)
 

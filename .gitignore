@@ -54,3 +54,6 @@ dkms.conf
 # uClinux
 images/*
 romfs/*
+
+*.depend
+

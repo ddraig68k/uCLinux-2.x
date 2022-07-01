@@ -19,7 +19,9 @@ redistribution of this file, and for a DISCLAIMER OF ALL WARRANTIES.
 #include "Python.h"
 
 
+extern void initthread(void);
 extern void initgc(void);
+extern void initbsddb(void);
 extern void initposix(void);
 extern void initstrop(void);
 extern void inittime(void);
@@ -34,7 +36,9 @@ extern void initimp(void);
 
 struct _inittab _PyImport_Inittab[] = {
 
+	{"thread", initthread},
 	{"gc", initgc},
+	{"bsddb", initbsddb},
 	{"posix", initposix},
 	{"strop", initstrop},
 	{"time", inittime},

@@ -79,9 +79,6 @@ check: all
 $(SUBDIRS): FORCE
 	cd $@ && $(MAKE) $(MAKEDEFS)
 
-romfs:
-	$(ROMFSINST) src/wget /bin/wget
-
 # install everything
 install: install.bin install.info install.wgetrc install.mo # install.man
 

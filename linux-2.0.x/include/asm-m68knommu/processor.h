@@ -84,23 +84,17 @@ static inline void start_thread(struct pt_regs * regs, unsigned long pc, unsigne
 #ifndef CONFIG_COLDFIRE
 static inline void tron(void)
 {
-	__asm__ __volatile__ ("
-	oriw #0x8000, %sr
-	");	
+	__asm__ __volatile__ ("oriw #0x8000, %sr");	
 }
 
 static inline void troncof(void)
 {
-	__asm__ __volatile__ ("
-	oriw #0x4000, %sr
-	");		
+	__asm__ __volatile__ ("oriw #0x4000, %sr");		
 }
 
 static inline void troff(void)
 {
-	__asm__ __volatile__ ("
-	andiw #0x3fff, %sr
-	");
+	__asm__ __volatile__ ("andiw #0x3fff, %sr");
 }
 #endif
 

@@ -118,94 +118,93 @@ static inline void outsw(void *addr,void *buf,int len)
    unsigned short * __e = (unsigned short *)(buf) + (len);
    unsigned short * __p = (unsigned short *)(buf);
    while (__p + 32 < __e) {
-      asm volatile ("
-       movem.w %0@+, %%d4-%%d7;
-       rol.w #8, %%d4;
-       rol.w #8, %%d5;
-       rol.w #8, %%d6;
-       rol.w #8, %%d7;
-       movem.w %%d4-%%d5, %2@;
-       movem.w %%d6-%%d7, %2@; 
+      asm volatile (
+       "movem.w %0@+, %%d4-%%d7;"
+       "rol.w #8, %%d4;"
+       "rol.w #8, %%d5;"
+       "rol.w #8, %%d6;"
+       "rol.w #8, %%d7;"
+       "movem.w %%d4-%%d5, %2@;"
+       "movem.w %%d6-%%d7, %2@; "
 
-       movem.w %0@+, %%d4-%%d7;
-       rol.w #8, %%d4;
-       rol.w #8, %%d5;
-       rol.w #8, %%d6;
-       rol.w #8, %%d7;
-       movem.w %%d4-%%d5, %2@;
-       movem.w %%d6-%%d7, %2@; 
+       "movem.w %0@+, %%d4-%%d7;"
+       "rol.w #8, %%d4;"
+       "rol.w #8, %%d5;"
+       "rol.w #8, %%d6;"
+       "rol.w #8, %%d7;"
+       "movem.w %%d4-%%d5, %2@;"
+       "movem.w %%d6-%%d7, %2@; "
 
-       movem.w %0@+, %%d4-%%d7;
-       rol.w #8, %%d4;
-       rol.w #8, %%d5;
-       rol.w #8, %%d6;
-       rol.w #8, %%d7;
-       movem.w %%d4-%%d5, %2@;
-       movem.w %%d6-%%d7, %2@; 
+       "movem.w %0@+, %%d4-%%d7;"
+       "rol.w #8, %%d4;"
+       "rol.w #8, %%d5;"
+       "rol.w #8, %%d6;"
+       "rol.w #8, %%d7;"
+       "movem.w %%d4-%%d5, %2@;"
+       "movem.w %%d6-%%d7, %2@; "
 
-       movem.w %0@+, %%d4-%%d7;
-       rol.w #8, %%d4;
-       rol.w #8, %%d5;
-       rol.w #8, %%d6;
-       rol.w #8, %%d7;
-       movem.w %%d4-%%d5, %2@;
-       movem.w %%d6-%%d7, %2@; 
+       "movem.w %0@+, %%d4-%%d7;"
+       "rol.w #8, %%d4;"
+       "rol.w #8, %%d5;"
+       "rol.w #8, %%d6;"
+       "rol.w #8, %%d7;"
+       "movem.w %%d4-%%d5, %2@;"
+       "movem.w %%d6-%%d7, %2@;"
 
-       movem.w %0@+, %%d4-%%d7;
-       rol.w #8, %%d4;
-       rol.w #8, %%d5;
-       rol.w #8, %%d6;
-       rol.w #8, %%d7;
-       movem.w %%d4-%%d5, %2@;
-       movem.w %%d6-%%d7, %2@; 
+       "movem.w %0@+, %%d4-%%d7;"
+       "rol.w #8, %%d4;"
+       "rol.w #8, %%d5;"
+       "rol.w #8, %%d6;"
+       "rol.w #8, %%d7;"
+       "movem.w %%d4-%%d5, %2@;"
+       "movem.w %%d6-%%d7, %2@; "
 
-       movem.w %0@+, %%d4-%%d7;
-       rol.w #8, %%d4;
-       rol.w #8, %%d5;
-       rol.w #8, %%d6;
-       rol.w #8, %%d7;
-       movem.w %%d4-%%d5, %2@;
-       movem.w %%d6-%%d7, %2@; 
+       "movem.w %0@+, %%d4-%%d7;"
+       "rol.w #8, %%d4;"
+       "rol.w #8, %%d5;"
+       "rol.w #8, %%d6;"
+       "rol.w #8, %%d7;"
+       "movem.w %%d4-%%d5, %2@;"
+       "movem.w %%d6-%%d7, %2@; "
 
-       movem.w %0@+, %%d4-%%d7;
-       rol.w #8, %%d4;
-       rol.w #8, %%d5;
-       rol.w #8, %%d6;
-       rol.w #8, %%d7;
-       movem.w %%d4-%%d5, %2@;
-       movem.w %%d6-%%d7, %2@; 
+       "movem.w %0@+, %%d4-%%d7;"
+       "rol.w #8, %%d4;"
+       "rol.w #8, %%d5;"
+       "rol.w #8, %%d6;"
+       "rol.w #8, %%d7;"
+       "movem.w %%d4-%%d5, %2@;"
+       "movem.w %%d6-%%d7, %2@; "
 
-       movem.w %0@+, %%d4-%%d7;
-       rol.w #8, %%d4;
-       rol.w #8, %%d5;
-       rol.w #8, %%d6;
-       rol.w #8, %%d7;
-       movem.w %%d4-%%d5, %2@;
-       movem.w %%d6-%%d7, %2@; 
+       "movem.w %0@+, %%d4-%%d7;"
+       "rol.w #8, %%d4;"
+       "rol.w #8, %%d5;"
+       "rol.w #8, %%d6;"
+       "rol.w #8, %%d7;"
+       "movem.w %%d4-%%d5, %2@;"
+       "movem.w %%d6-%%d7, %2@; "
 
-       "
        : "=a" (__p)
        : "0" (__p) , "a" (addr)
        : "d4", "d5", "d6", "d7");
     }
    while (__p + 8 < __e) {
-      asm volatile ("
-       movem.w %0@+, %%d4-%%d7;
-       rol.w #8, %%d4;
-       rol.w #8, %%d5;
-       rol.w #8, %%d6;
-       rol.w #8, %%d7;
-       movem.w %%d4-%%d5, %2@;
-       movem.w %%d6-%%d7, %2@;
- 
-       movem.w %0@+, %%d4-%%d7;
-       rol.w #8, %%d4;
-       rol.w #8, %%d5;
-       rol.w #8, %%d6;
-       rol.w #8, %%d7;
-       movem.w %%d4-%%d5, %2@;
-       movem.w %%d6-%%d7, %2@;
-       "
+      asm volatile (
+       "movem.w %0@+, %%d4-%%d7;"
+       "rol.w #8, %%d4;"
+       "rol.w #8, %%d5;"
+       "rol.w #8, %%d6;"
+       "rol.w #8, %%d7;"
+       "movem.w %%d4-%%d5, %2@;"
+       "movem.w %%d6-%%d7, %2@;"
+
+       "movem.w %0@+, %%d4-%%d7;"
+       "rol.w #8, %%d4;"
+       "rol.w #8, %%d5;"
+       "rol.w #8, %%d6;"
+       "rol.w #8, %%d7;"
+       "movem.w %%d4-%%d5, %2@;"
+       "movem.w %%d6-%%d7, %2@;"
+
        : "=a" (__p)
        : "0" (__p) , "a" (addr)
        : "d4", "d5", "d6", "d7");
@@ -223,104 +222,103 @@ static inline void insw(void *addr,void *buf,int len)
    unsigned short * __p = (unsigned short *)(buf);
    unsigned short __v;
    while (__p + 32 < __e) {
-      asm volatile ("
-       movem.w %2@, %%d4-%%d5;
-       movem.w %2@, %%d6-%%d7;
-       rol.w #8, %%d4;
-       rol.w #8, %%d5;
-       rol.w #8, %%d6;
-       rol.w #8, %%d7;
-       movem.w %%d4-%%d7, %0@;
-       addq #8, %0;
+      asm volatile (
+       "movem.w %2@, %%d4-%%d5;"
+       "movem.w %2@, %%d6-%%d7;"
+       "rol.w #8, %%d4;"
+       "rol.w #8, %%d5;"
+       "rol.w #8, %%d6;"
+       "rol.w #8, %%d7;"
+       "movem.w %%d4-%%d7, %0@;"
+       "addq #8, %0;"
  
-       movem.w %2@, %%d4-%%d5;
-       movem.w %2@, %%d6-%%d7;
-       rol.w #8, %%d4;
-       rol.w #8, %%d5;
-       rol.w #8, %%d6;
-       rol.w #8, %%d7;
-       movem.w %%d4-%%d7, %0@;
-       addq #8, %0;
+       "movem.w %2@, %%d4-%%d5;"
+       "movem.w %2@, %%d6-%%d7;"
+       "rol.w #8, %%d4;"
+       "rol.w #8, %%d5;"
+       "rol.w #8, %%d6;"
+       "rol.w #8, %%d7;"
+       "movem.w %%d4-%%d7, %0@;"
+       "addq #8, %0;"
  
-       movem.w %2@, %%d4-%%d5;
-       movem.w %2@, %%d6-%%d7;
-       rol.w #8, %%d4;
-       rol.w #8, %%d5;
-       rol.w #8, %%d6;
-       rol.w #8, %%d7;
-       movem.w %%d4-%%d7, %0@;
-       addq #8, %0;
+       "movem.w %2@, %%d4-%%d5;"
+       "movem.w %2@, %%d6-%%d7;"
+       "rol.w #8, %%d4;"
+       "rol.w #8, %%d5;"
+       "rol.w #8, %%d6;"
+       "rol.w #8, %%d7;"
+       "movem.w %%d4-%%d7, %0@;"
+       "addq #8, %0;"
  
-       movem.w %2@, %%d4-%%d5;
-       movem.w %2@, %%d6-%%d7;
-       rol.w #8, %%d4;
-       rol.w #8, %%d5;
-       rol.w #8, %%d6;
-       rol.w #8, %%d7;
-       movem.w %%d4-%%d7, %0@;
-       addq #8, %0;
+       "movem.w %2@, %%d4-%%d5;"
+       "movem.w %2@, %%d6-%%d7;"
+       "rol.w #8, %%d4;"
+       "rol.w #8, %%d5;"
+       "rol.w #8, %%d6;"
+       "rol.w #8, %%d7;"
+       "movem.w %%d4-%%d7, %0@;"
+       "addq #8, %0;"
  
-       movem.w %2@, %%d4-%%d5;
-       movem.w %2@, %%d6-%%d7;
-       rol.w #8, %%d4;
-       rol.w #8, %%d5;
-       rol.w #8, %%d6;
-       rol.w #8, %%d7;
-       movem.w %%d4-%%d7, %0@;
-       addq #8, %0;
+       "movem.w %2@, %%d4-%%d5;"
+       "movem.w %2@, %%d6-%%d7;"
+       "rol.w #8, %%d4;"
+       "rol.w #8, %%d5;"
+       "rol.w #8, %%d6;"
+       "rol.w #8, %%d7;"
+       "movem.w %%d4-%%d7, %0@;"
+       "addq #8, %0;"
  
-       movem.w %2@, %%d4-%%d5;
-       movem.w %2@, %%d6-%%d7;
-       rol.w #8, %%d4;
-       rol.w #8, %%d5;
-       rol.w #8, %%d6;
-       rol.w #8, %%d7;
-       movem.w %%d4-%%d7, %0@;
-       addq #8, %0;
+       "movem.w %2@, %%d4-%%d5;"
+       "movem.w %2@, %%d6-%%d7;"
+       "rol.w #8, %%d4;"
+       "rol.w #8, %%d5;"
+       "rol.w #8, %%d6;"
+       "rol.w #8, %%d7;"
+       "movem.w %%d4-%%d7, %0@;"
+       "addq #8, %0;"
  
-       movem.w %2@, %%d4-%%d5;
-       movem.w %2@, %%d6-%%d7;
-       rol.w #8, %%d4;
-       rol.w #8, %%d5;
-       rol.w #8, %%d6;
-       rol.w #8, %%d7;
-       movem.w %%d4-%%d7, %0@;
-       addq #8, %0;
+       "movem.w %2@, %%d4-%%d5;"
+       "movem.w %2@, %%d6-%%d7;"
+       "rol.w #8, %%d4;"
+       "rol.w #8, %%d5;"
+       "rol.w #8, %%d6;"
+       "rol.w #8, %%d7;"
+       "movem.w %%d4-%%d7, %0@;"
+       "addq #8, %0;"
  
-       movem.w %2@, %%d4-%%d5;
-       movem.w %2@, %%d6-%%d7;
-       rol.w #8, %%d4;
-       rol.w #8, %%d5;
-       rol.w #8, %%d6;
-       rol.w #8, %%d7;
-       movem.w %%d4-%%d7, %0@;
-       addq #8, %0;
+       "movem.w %2@, %%d4-%%d5;"
+       "movem.w %2@, %%d6-%%d7;"
+       "rol.w #8, %%d4;"
+       "rol.w #8, %%d5;"
+       "rol.w #8, %%d6;"
+       "rol.w #8, %%d7;"
+       "movem.w %%d4-%%d7, %0@;"
+       "addq #8, %0;"
  
-       "
        : "=a" (__p)
        : "0" (__p) , "a" (addr)
        : "d4", "d5", "d6", "d7");
     }
     while (__p + 8 < __e) {
-      asm volatile ("
-       movem.w %2@, %%d4-%%d5;
-       movem.w %2@, %%d6-%%d7;
-       rol.w #8, %%d4;
-       rol.w #8, %%d5;
-       rol.w #8, %%d6;
-       rol.w #8, %%d7;
-       movem.w %%d4-%%d7, %0@;
-       addq #8, %0;
- 
-       movem.w %2@, %%d4-%%d5;
-       movem.w %2@, %%d6-%%d7;
-       rol.w #8, %%d4;
-       rol.w #8, %%d5;
-       rol.w #8, %%d6;
-       rol.w #8, %%d7;
-       movem.w %%d4-%%d7, %0@;
-       addq #8, %0;
-       "
+      asm volatile (
+       "movem.w %2@, %%d4-%%d5;"
+       "movem.w %2@, %%d6-%%d7;"
+       "rol.w #8, %%d4;"
+       "rol.w #8, %%d5;"
+       "rol.w #8, %%d6;"
+       "rol.w #8, %%d7;"
+       "movem.w %%d4-%%d7, %0@;"
+       "addq #8, %0;"
+
+       "movem.w %2@, %%d4-%%d5;"
+       "movem.w %2@, %%d6-%%d7;"
+       "rol.w #8, %%d4;"
+       "rol.w #8, %%d5;"
+       "rol.w #8, %%d6;"
+       "rol.w #8, %%d7;"
+       "movem.w %%d4-%%d7, %0@;"
+       "addq #8, %0;"
+
        : "=a" (__p)
        : "0" (__p) , "a" (addr)
        : "d4", "d5", "d6", "d7");

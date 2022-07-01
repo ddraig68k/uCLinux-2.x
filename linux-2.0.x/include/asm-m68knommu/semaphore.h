@@ -75,14 +75,14 @@ extern inline int down_interruptible(struct semaphore * sem)
  * Primitives to spin on a lock.  Needed only for SMP version ... so
  * somebody should start playing with one of those Sony NeWS stations.
  */
-extern inline void get_buzz_lock(int *lock_ptr)
+static inline void get_buzz_lock(int *lock_ptr)
 {
 #ifdef __SMP__
         while (xchg(lock_ptr,1) != 0) ;
 #endif
 }
 
-extern inline void give_buzz_lock(int *lock_ptr)
+static inline void give_buzz_lock(int *lock_ptr)
 {
 #ifdef __SMP__
         *lock_ptr = 0 ;
@@ -96,7 +96,7 @@ extern inline void give_buzz_lock(int *lock_ptr)
  * The default case (no contention) will result in NO
  * jumps for both down() and up().
  */
-extern inline void up(struct semaphore * sem)
+static inline void up(struct semaphore * sem)
 {
 	__asm__ __volatile__(
 		"| atomic up operation\n\t"

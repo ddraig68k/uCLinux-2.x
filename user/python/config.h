@@ -20,7 +20,7 @@
 /* #undef gid_t */
 
 /* Define if your struct tm has tm_zone.  */
-/* #undef HAVE_TM_ZONE */
+#define HAVE_TM_ZONE 1
 
 /* Define if you don't have tm_zone but do have the external array
    tzname.  */
@@ -133,7 +133,7 @@
 #define MALLOC_ZERO_RETURNS_NULL 1
 
 /* Define if you have POSIX threads */
-/* #undef _POSIX_THREADS */
+#define _POSIX_THREADS 1
 
 /* Define to force use of thread-safe errno, h_errno, and other functions */
 #define _REENTRANT 1
@@ -145,7 +145,7 @@
 /* #undef signed */
 
 /* Define to `int' if <sys/types.h> doesn't define.  */
-#define socklen_t int
+/* #undef socklen_t */
 
 /* Define if  you can safely include both <sys/select.h> and <sys/time.h>
    (which you can't on SCO ODT 3.0). */
@@ -161,7 +161,7 @@
 /* #undef WANT_SIGFPE_HANDLER */
 
 /* Define if the compiler provides a wchar.h header file. */
-/* #undef HAVE_WCHAR_H */
+#define HAVE_WCHAR_H 1
 
 /* Define if you have a useable wchar_t type defined in wchar.h; useable
    means wchar_t must be 16-bit unsigned type. (see
@@ -196,7 +196,7 @@
 /* #undef WITH_DYLD */
 
 /* Define if you want to compile in rudimentary thread support */
-/* #undef WITH_THREAD */
+#define WITH_THREAD 1
 
 /* Define if you want to compile in cycle garbage collection */
 #define WITH_CYCLE_GC 1
@@ -206,7 +206,7 @@
 /* #undef WITH_NEXT_FRAMEWORK */
 
 /* Define if you want to use BSD db. */
-/* #undef WITH_LIBDB */
+#define WITH_LIBDB 1
 
 /* Define if you want to build an interpreter with many run-time checks  */
 /* #undef Py_DEBUG */
@@ -230,7 +230,7 @@
 /* #undef HAVE_LARGEFILE_SUPPORT */
 
 /* Defined when any dynamic module loading is enabled */
-/* #undef HAVE_DYNAMIC_LOADING */
+#define HAVE_DYNAMIC_LOADING 1
 
 /* Define if i>>j for signed int i does not extend the sign bit
    when i < 0
@@ -277,49 +277,49 @@
 #define HAVE_CHOWN 1
 
 /* Define if you have the clock function.  */
-/* #undef HAVE_CLOCK */
+#define HAVE_CLOCK 1
 
 /* Define if you have the confstr function.  */
-/* #undef HAVE_CONFSTR */
+#define HAVE_CONFSTR 1
 
 /* Define if you have the ctermid function.  */
-/* #undef HAVE_CTERMID */
+#define HAVE_CTERMID 1
 
 /* Define if you have the ctermid_r function.  */
 /* #undef HAVE_CTERMID_R */
 
 /* Define if you have the dlopen function.  */
-/* #undef HAVE_DLOPEN */
+#define HAVE_DLOPEN 1
 
 /* Define if you have the dup2 function.  */
-/* #undef HAVE_DUP2 */
+#define HAVE_DUP2 1
 
 /* Define if you have the execv function.  */
-/* #undef HAVE_EXECV */
+#define HAVE_EXECV 1
 
 /* Define if you have the fdatasync function.  */
-/* #undef HAVE_FDATASYNC */
+#define HAVE_FDATASYNC 1
 
 /* Define if you have the flock function.  */
 #define HAVE_FLOCK 1
 
 /* Define if you have the fork function.  */
-/* #undef HAVE_FORK */
+#define HAVE_FORK 1
 
 /* Define if you have the forkpty function.  */
-/* #undef HAVE_FORKPTY */
+#define HAVE_FORKPTY 1
 
 /* Define if you have the fpathconf function.  */
-/* #undef HAVE_FPATHCONF */
+#define HAVE_FPATHCONF 1
 
 /* Define if you have the fseek64 function.  */
 /* #undef HAVE_FSEEK64 */
 
 /* Define if you have the fseeko function.  */
-/* #undef HAVE_FSEEKO */
+#define HAVE_FSEEKO 1
 
 /* Define if you have the fstatvfs function.  */
-/* #undef HAVE_FSTATVFS */
+#define HAVE_FSTATVFS 1
 
 /* Define if you have the fsync function.  */
 #define HAVE_FSYNC 1
@@ -331,10 +331,10 @@
 #define HAVE_FTELLO 1
 
 /* Define if you have the ftime function.  */
-/* #undef HAVE_FTIME */
+#define HAVE_FTIME 1
 
 /* Define if you have the ftruncate function.  */
-/* #undef HAVE_FTRUNCATE */
+#define HAVE_FTRUNCATE 1
 
 /* Define if you have the getcwd function.  */
 #define HAVE_GETCWD 1
@@ -346,7 +346,7 @@
 /* #undef HAVE_GETHOSTBYNAME */
 
 /* Define if you have the getlogin function.  */
-/* #undef HAVE_GETLOGIN */
+#define HAVE_GETLOGIN 1
 
 /* Define if you have the getpeername function.  */
 #define HAVE_GETPEERNAME 1
@@ -355,7 +355,7 @@
 #define HAVE_GETPGRP 1
 
 /* Define if you have the getpid function.  */
-/* #undef HAVE_GETPID */
+#define HAVE_GETPID 1
 
 /* Define if you have the getpwent function.  */
 #define HAVE_GETPWENT 1
@@ -391,13 +391,13 @@
 #define HAVE_MREMAP 1
 
 /* Define if you have the nice function.  */
-/* #undef HAVE_NICE */
+#define HAVE_NICE 1
 
 /* Define if you have the openpty function.  */
-/* #undef HAVE_OPENPTY */
+#define HAVE_OPENPTY 1
 
 /* Define if you have the pathconf function.  */
-/* #undef HAVE_PATHCONF */
+#define HAVE_PATHCONF 1
 
 /* Define if you have the pause function.  */
 #define HAVE_PAUSE 1
@@ -406,13 +406,13 @@
 /* #undef HAVE_PLOCK */
 
 /* Define if you have the poll function.  */
-/* #undef HAVE_POLL */
+#define HAVE_POLL 1
 
 /* Define if you have the pthread_init function.  */
 /* #undef HAVE_PTHREAD_INIT */
 
 /* Define if you have the putenv function.  */
-/* #undef HAVE_PUTENV */
+#define HAVE_PUTENV 1
 
 /* Define if you have the readlink function.  */
 #define HAVE_READLINK 1
@@ -421,49 +421,49 @@
 #define HAVE_SELECT 1
 
 /* Define if you have the setegid function.  */
-/* #undef HAVE_SETEGID */
+#define HAVE_SETEGID 1
 
 /* Define if you have the seteuid function.  */
-/* #undef HAVE_SETEUID */
+#define HAVE_SETEUID 1
 
 /* Define if you have the setgid function.  */
-/* #undef HAVE_SETGID */
+#define HAVE_SETGID 1
 
 /* Define if you have the setlocale function.  */
-/* #undef HAVE_SETLOCALE */
+#define HAVE_SETLOCALE 1
 
 /* Define if you have the setpgid function.  */
-/* #undef HAVE_SETPGID */
+#define HAVE_SETPGID 1
 
 /* Define if you have the setpgrp function.  */
-/* #undef HAVE_SETPGRP */
+#define HAVE_SETPGRP 1
 
 /* Define if you have the setregid function.  */
-/* #undef HAVE_SETREGID */
+#define HAVE_SETREGID 1
 
 /* Define if you have the setreuid function.  */
-/* #undef HAVE_SETREUID */
+#define HAVE_SETREUID 1
 
 /* Define if you have the setsid function.  */
-/* #undef HAVE_SETSID */
+#define HAVE_SETSID 1
 
 /* Define if you have the setuid function.  */
-/* #undef HAVE_SETUID */
+#define HAVE_SETUID 1
 
 /* Define if you have the setvbuf function.  */
-/* #undef HAVE_SETVBUF */
+#define HAVE_SETVBUF 1
 
 /* Define if you have the sigaction function.  */
 #define HAVE_SIGACTION 1
 
 /* Define if you have the siginterrupt function.  */
-/* #undef HAVE_SIGINTERRUPT */
+#define HAVE_SIGINTERRUPT 1
 
 /* Define if you have the sigrelse function.  */
 #define HAVE_SIGRELSE 1
 
 /* Define if you have the statvfs function.  */
-/* #undef HAVE_STATVFS */
+#define HAVE_STATVFS 1
 
 /* Define if you have the strdup function.  */
 #define HAVE_STRDUP 1
@@ -472,10 +472,10 @@
 #define HAVE_STRERROR 1
 
 /* Define if you have the strftime function.  */
-/* #undef HAVE_STRFTIME */
+#define HAVE_STRFTIME 1
 
 /* Define if you have the strptime function.  */
-/* #undef HAVE_STRPTIME */
+#define HAVE_STRPTIME 1
 
 /* Define if you have the symlink function.  */
 #define HAVE_SYMLINK 1
@@ -490,7 +490,7 @@
 #define HAVE_TCSETPGRP 1
 
 /* Define if you have the tempnam function.  */
-/* #undef HAVE_TEMPNAM */
+#define HAVE_TEMPNAM 1
 
 /* Define if you have the timegm function.  */
 #define HAVE_TIMEGM 1
@@ -499,13 +499,13 @@
 #define HAVE_TIMES 1
 
 /* Define if you have the tmpfile function.  */
-/* #undef HAVE_TMPFILE */
+#define HAVE_TMPFILE 1
 
 /* Define if you have the tmpnam function.  */
-/* #undef HAVE_TMPNAM */
+#define HAVE_TMPNAM 1
 
 /* Define if you have the tmpnam_r function.  */
-/* #undef HAVE_TMPNAM_R */
+#define HAVE_TMPNAM_R 1
 
 /* Define if you have the truncate function.  */
 #define HAVE_TRUNCATE 1
@@ -517,13 +517,13 @@
 #define HAVE_WAITPID 1
 
 /* Define if you have the <db.h> header file.  */
-/* #undef HAVE_DB_H */
+#define HAVE_DB_H 1
 
 /* Define if you have the <db1/ndbm.h> header file.  */
-/* #undef HAVE_DB1_NDBM_H */
+#define HAVE_DB1_NDBM_H 1
 
 /* Define if you have the <db_185.h> header file.  */
-/* #undef HAVE_DB_185_H */
+#define HAVE_DB_185_H 1
 
 /* Define if you have the <dirent.h> header file.  */
 #define HAVE_DIRENT_H 1
@@ -535,7 +535,7 @@
 #define HAVE_FCNTL_H 1
 
 /* Define if you have the <gdbm/ndbm.h> header file.  */
-/* #undef HAVE_GDBM_NDBM_H */
+#define HAVE_GDBM_NDBM_H 1
 
 /* Define if you have the <libutil.h> header file.  */
 /* #undef HAVE_LIBUTIL_H */
@@ -544,10 +544,10 @@
 #define HAVE_LIMITS_H 1
 
 /* Define if you have the <locale.h> header file.  */
-/* #undef HAVE_LOCALE_H */
+#define HAVE_LOCALE_H 1
 
 /* Define if you have the <ncurses.h> header file.  */
-/* #undef HAVE_NCURSES_H */
+#define HAVE_NCURSES_H 1
 
 /* Define if you have the <ndbm.h> header file.  */
 /* #undef HAVE_NDBM_H */
@@ -556,13 +556,13 @@
 /* #undef HAVE_NDIR_H */
 
 /* Define if you have the <poll.h> header file.  */
-/* #undef HAVE_POLL_H */
+#define HAVE_POLL_H 1
 
 /* Define if you have the <pthread.h> header file.  */
-/* #undef HAVE_PTHREAD_H */
+#define HAVE_PTHREAD_H 1
 
 /* Define if you have the <pty.h> header file.  */
-/* #undef HAVE_PTY_H */
+#define HAVE_PTY_H 1
 
 /* Define if you have the <signal.h> header file.  */
 #define HAVE_SIGNAL_H 1
@@ -595,7 +595,7 @@
 #define HAVE_SYS_PARAM_H 1
 
 /* Define if you have the <sys/select.h> header file.  */
-/* #undef HAVE_SYS_SELECT_H */
+#define HAVE_SYS_SELECT_H 1
 
 /* Define if you have the <sys/socket.h> header file.  */
 #define HAVE_SYS_SOCKET_H 1
@@ -625,7 +625,7 @@
 #define HAVE_UTIME_H 1
 
 /* Define if you have the dl library (-ldl).  */
-/* #undef HAVE_LIBDL */
+#define HAVE_LIBDL 1
 
 /* Define if you have the dld library (-ldld).  */
 /* #undef HAVE_LIBDLD */
@@ -635,6 +635,21 @@
 
 /* Changes made in porting to the Motorola Coldfire */
 #define WITHOUT_COMPLEX 1
-/* #undef  HAVE_DYNAMIC_LOADING */
+#define  HAVE_DYNAMIC_LOADING 1
+#define Py_LONGOBJECT_H
+#define Py_LONGINTREPR_H   
 #define WITH_COMPILE 0
 #define WITH_GETPATH 0
+#define PyLong_Type
+#define PyLong_AsLong
+#define PyLong_FromLong
+#define PyLong_FromString
+#define PyLong_AsLongLong
+#define PyLong_Type
+#define _PyLong_New
+#define PyLong_FromLongLong
+#define PyLong_FromDouble
+#define PyLong_FromUnicode
+#define PyLong_FromVoidPtr
+#define PyLong_Check
+#define PyLongObject
